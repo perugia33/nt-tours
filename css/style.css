@@ -6,13 +6,17 @@
     box-sizing: border-box;
 }
 
+html{
+    font-size: 10px;
+}
+
 body{
     font-family: "Lato" , sans-serif;
     font-weight: 400;
-    font-size: 22px;
+    font-size: 2.2rem;
     line-height: 1.5;
     color: whitesmoke;
-    padding: 30px;
+    padding: 3rem;
   
 }
 /* (rgba(104, 212, 133, 0.8), rgba(104, 212, 133, 0.8)) */
@@ -30,14 +34,14 @@ body{
 
 .box-logo{
     position: absolute;
-    top: 40px;
-    left: 40px;
+    top: 4rem;
+    left: 4rem;
 
 
 }
 
 .logo{
-    height: 40px;
+    height: 4rem;
 }
 .logo:hover{
     animation: transition-left 4s ease-out;
@@ -56,13 +60,13 @@ body{
 
 .heading-primary{
     text-transform: uppercase;
-    margin-bottom: 60px;
+    margin-bottom: 6rem;
 }
 
 .heading-primary-main{
     display: block;
-    font-size: 45px;
-    letter-spacing: 25px;
+    font-size: 4.5rem;
+    letter-spacing: 2.5rem;
     font-weight: 400;
     animation: transition-left 4s ease-out;
    
@@ -71,10 +75,10 @@ body{
 timing-function delay iteration-count direction fill-mode; */
 .heading-primary-second{
     display: block;
-    font-size: 22px;
-    letter-spacing: 17px;
+    font-size: 2.2rem;
+    letter-spacing: 1.7rem;
     font-weight: 700;
-    margin-left: 20px;
+    margin-left: 2rem;
     animation: transition-right 2s  ease-in  2s backwards;
     
 }
@@ -83,12 +87,12 @@ timing-function delay iteration-count direction fill-mode; */
 @keyframes transition-left{
     0%{
         opacity: 0;
-        transform: translate(-100px);
+        transform: translate(-10rem);
         /* Object is far off page and out of sight */
     }
 
     50%{
-        transform: translate(10px);
+        transform: translate(1rem);
     }
 
     100%{
@@ -102,13 +106,9 @@ timing-function delay iteration-count direction fill-mode; */
 @keyframes transition-right{
     0%{
         opacity: 0;
-        transform: translate(200px);
+        transform: translate(20rem);
         /* Object is far off page and out of sight */
     }
-
-    /* 50%{
-        transform: translate(100px);
-    } */
 
     100%{
         opacity: 1;
@@ -121,11 +121,10 @@ timing-function delay iteration-count direction fill-mode; */
 @keyframes transition-bottom{
     0%{
         opacity: 0;
-        transform: translateY(30px);
+        transform: translateY(3rem);
         /* Object is far off page and out of sight */
     }
 
-  
     100%{
         opacity: 1;
         transform: translate(0);
@@ -140,22 +139,22 @@ timing-function delay iteration-count direction fill-mode; */
 .btn:visited{
     text-transform: uppercase;
     text-decoration: none;
-    border-radius: 100px;
+    border-radius: 10rem;
     /* adding a high value for border-radius creates an oval shape */
     transition: all .2s;
     position: relative;
 }
 
 .btn:hover{
-    transform: translateY(-3px);
+    transform: translateY(-.3rem);
     color: indigo;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
     /* For box-shadow values are in this order: x, y, blur, color */
 }
 
 .btn:active{
-    transform: translateY(-1px);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-.1rem);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.2);
     /* By decreasing the value of 'Y' and blur as compared to hover state,
     you give the illusion that the button is moving closer to the page and away 
     from the user */
@@ -164,7 +163,7 @@ timing-function delay iteration-count direction fill-mode; */
 .btn-white{
     background-color: whitesmoke;
     color: rgb(110, 109, 109);
-    padding: 12px 36px;
+    padding: 1.2rem 3.6rem;
     display: inline-block;
     /* Changing inline-text to inline-block */
 }
@@ -175,7 +174,7 @@ timing-function delay iteration-count direction fill-mode; */
     height: 100%;  
     /* This 100% of button's height */
     width:100%;
-    border-radius: 100px;
+    border-radius: 10rem;
     /* Same as button's border-radius */
     /* This is a pseudo element that duplicates the look of the orginal button
     It goes behind the button */
