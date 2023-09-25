@@ -1,14 +1,16 @@
 
 /* Reset default settings */
-*{
+*, ::after, ::before{
     margin:0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: inherit;
 }
 
 html{
-    font-size: 10px;
+    font-size: 62.5%;
 }
+/* Using a percentage ensures the users can change the default font-size.. The
+default font-size is 16px.   10px is the desired font size and 10 px is 62.5% of 16 */
 
 body{
     font-family: "Lato" , sans-serif;
@@ -17,6 +19,9 @@ body{
     line-height: 1.5;
     color: whitesmoke;
     padding: 3rem;
+    box-sizing: border-box;
+    /* with box-sizing, border box , the content width will be reduce by the padding and border
+    instead of adding them to the specific with(defalut box-sizing) */
   
 }
 /* (rgba(104, 212, 133, 0.8), rgba(104, 212, 133, 0.8)) */
@@ -32,7 +37,7 @@ body{
 }
 
 
-.box-logo{
+.header__box-logo{
     position: absolute;
     top: 4rem;
     left: 4rem;
@@ -47,7 +52,7 @@ body{
     animation: transition-left 4s ease-out;
 }
 
-.text-box{
+.header__text-box{
     position: absolute;
     top: 40%;
     left: 50%;
@@ -63,7 +68,7 @@ body{
     margin-bottom: 6rem;
 }
 
-.heading-primary-main{
+.heading-primary--main{
     display: block;
     font-size: 4.5rem;
     letter-spacing: 2.5rem;
@@ -73,7 +78,7 @@ body{
 }
 /* Here are the option for animation:  animation: name duration 
 timing-function delay iteration-count direction fill-mode; */
-.heading-primary-second{
+.heading-primary--second{
     display: block;
     font-size: 2.2rem;
     letter-spacing: 1.7rem;
@@ -160,7 +165,7 @@ timing-function delay iteration-count direction fill-mode; */
     from the user */
 }
 
-.btn-white{
+.btn--white{
     background-color: whitesmoke;
     color: rgb(110, 109, 109);
     padding: 1.2rem 3.6rem;
@@ -198,6 +203,6 @@ timing-function delay iteration-count direction fill-mode; */
     opacity: 0;
 }
 
-.btn-animated{
+.btn--animated{
     animation: transition-bottom 3s ease-out 4s backwards;
 }
