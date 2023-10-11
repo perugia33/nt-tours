@@ -206,3 +206,24 @@ timing-function delay iteration-count direction fill-mode; */
 .btn--animated{
     animation: transition-bottom 3s ease-out 4s backwards;
 }
+
+nav{
+    background-color:#ffb6c1;
+}
+
+li{
+    display: inline-block;
+
+}
+
+li:first-child{
+    font-size: 22px;
+}
+
+a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #4b0082;
+    border: 2px solid #4b0082;
+    
+}

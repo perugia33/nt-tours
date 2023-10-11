@@ -1,0 +1,25 @@
+{
+  "name": "nt-tours",
+  "version": "1.0.0",
+  "description": "Landing page for Venture Tours",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/perugia33/venture-tours.git"
+  },
+  "author": "\"Theresa\"",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/perugia33/venture-tours/issues"
+  },
+  "homepage": "https://github.com/perugia33/venture-tours#readme",
+  "devDependencies": {
+    "node-sass": "^9.0.0"
+  },
+  "dependencies": {
+    "jquery": "^3.7.1"
+  }
+}

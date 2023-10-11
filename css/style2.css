@@ -1,0 +1,61 @@
+.table2{
+    padding: 10px;
+}
+
+.table2 th{
+    padding: 10px;
+
+}
+
+
+.table{
+    display: table;
+}
+
+.table-header-group{
+    display: table-header-group;
+}
+
+.table-cell{
+    display: table-cell;
+    padding: 10px;
+    font-weight: 700;
+}
+
+.table-row{
+    display: table-row;
+}
+
+.block{
+    display: block;
+    height: 100px;
+    width: 250px;
+    background-color: lightslategray;
+    margin: 10px;
+}
+
+.inline{
+    display: inline;
+    margin: 10px;
+    background-color: dodgerblue;
+
+}
+
+.inline-block{
+    display: inline-block;
+    margin: 10px;
+    background-color: dodgerblue;
+    height: 100px;
+    width: 250px;
+    line-height: 100px;
+    padding: 20px;
+    text-align: center;
+
+}
+
+
+
+body{
+    height: 1100px;
+    margin-bottom: 200px;
+}
