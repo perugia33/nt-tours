@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/perugia33/venture-tours.git"
+    "url": "git+https://github.com/perugia33/nt-tours"
   },
   "author": "\"Theresa\"",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/perugia33/venture-tours/issues"
+    "url": "https://github.com/perugia33/nt-tours/issues"
   },
-  "homepage": "https://github.com/perugia33/venture-tours#readme",
+  "homepage": "https://github.com/perugia33/nt-tours#readme",
   "devDependencies": {
     "node-sass": "^9.0.0"
   },
