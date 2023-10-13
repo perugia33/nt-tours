@@ -4,7 +4,8 @@
   "description": "Landing page for Venture Tours",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "compile:sass": "node-sass sass/main.scss   css/style.css",
+    "watch:sass": "node-sass -w   sass/main.scss  css/style.css"
   },
   "repository": {
     "type": "git",
