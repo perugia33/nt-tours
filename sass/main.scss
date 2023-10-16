@@ -1,245 +1,37 @@
-
-/* Reset default settings */
-*, ::after, ::before{
-    margin:0;
-    padding: 0;
-    box-sizing: inherit;
-}
-
-html{
-    font-size: 62.5%;
-}
-/* Using a percentage ensures the users can change the default font-size.. The
-default font-size is 16px.   10px is the desired font size and 10 px is 62.5% of 16 */
-
-/* Colors  Start 
- indigo: #4b0082;
- whitesmoke:#f5f5f5
- medium-gray:#6e6d6d
- nav-pink:#ffb6c1
- darkest:#00000033
-
-*/
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variables";
 
 
-$color-primary:#4b0082;
-$color-primary-light:#f5f5f5;
-$color-btn:#6e6d6d;
-$color-nav-pink:#ffb6c1;
-$color-primary-darkest:#00000033;
+@import "base/animations";
+@import "base/base.scss";
+@import "base/typography";
+@import "base/utilities";
+
+@import "components/button";
+
+@import "layout/header";
+
+@import "pages/home";
 
 
-body{
-    font-family: "Lato" , sans-serif;
-    font-weight: 400;
-    font-size: 2.2rem;
-    line-height: 1.5;
-    color: $color-primary-light;
-    padding: 3rem;
-    box-sizing: border-box;
-    /* with box-sizing, border box , the content width will be reduce by the padding and border
-    instead of adding them to the specific with(defalut box-sizing) */
-}
-/* (rgba(104, 212, 133, 0.8), rgba(104, 212, 133, 0.8)) */
-/* (rgba(104, 212, 133, 0.5), rgba(169, 104, 212, 0.5)) */
-.header{
-    height: 95vh;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(190, 159, 211, 0.4)),url(../images/japanese-garden.jpeg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    
 
-}
+// nav{
+//     background-color: $color-nav-pink;
+// }
 
+// li{
+//     display: inline-block;
 
-.header__box-logo{
-    position: absolute;
-    top: 4rem;
-    left: 4rem;
+// }
 
+// li:first-child{
+//     font-size: 22px;
+// }
 
-}
-
-.logo{
-    height: 4rem;
-}
-.logo:hover{
-    animation: transition-left 4s ease-out;
-}
-
-.header__text-box{
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    line-height: 2.5;
-    transform: translate(-10%, -50%);
-    /* transform/translate moves center of text box */
-    text-align: center;
-
-}
-
-.heading-primary{
-    text-transform: uppercase;
-    margin-bottom: 6rem;
-}
-
-.heading-primary--main{
-    display: block;
-    font-size: 4.5rem;
-    letter-spacing: 2.5rem;
-    font-weight: 400;
-    animation: transition-left 4s ease-out;
-   
-}
-/* Here are the option for animation:  animation: name duration 
-timing-function delay iteration-count direction fill-mode; */
-.heading-primary--second{
-    display: block;
-    font-size: 2.2rem;
-    letter-spacing: 1.7rem;
-    font-weight: 700;
-    margin-left: 2rem;
-    animation: transition-right 2s  ease-in  2s backwards;
-    
-}
-
-
-@keyframes transition-left{
-    0%{
-        opacity: 0;
-        transform: translate(-10rem);
-        /* Object is far off page and out of sight */
-    }
-
-    50%{
-        transform: translate(1rem);
-    }
-
-    100%{
-        opacity: 1;
-        transform: translate(0);
-        /* at zero, the element is at its original place */
-    } 
-        /* Added to first part of header to add fade-in from left */
-}
-
-@keyframes transition-right{
-    0%{
-        opacity: 0;
-        transform: translate(20rem);
-        /* Object is far off page and out of sight */
-    }
-
-    100%{
-        opacity: 1;
-        transform: translate(0);
-        /* at zero, the element is at its original place */
-    } 
-    /* Added to second part of header to add fade-in from right */
-}
-
-@keyframes transition-bottom{
-    0%{
-        opacity: 0;
-        transform: translateY(3rem);
-        /* Object is far off page and out of sight */
-    }
-
-    100%{
-        opacity: 1;
-        transform: translate(0);
-        /* at zero, the element is at its original place */
-    } 
-    /* Added to second part of header to add fade-in from right */
-}
-
-    
-
-.btn:link,
-.btn:visited{
-    text-transform: uppercase;
-    text-decoration: none;
-    border-radius: 10rem;
-    /* adding a high value for border-radius creates an oval shape */
-    transition: all .2s;
-    position: relative;
-}
-
-.btn:hover{
-    transform: translateY(-.3rem);
-    color: indigo;
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
-    /* For box-shadow values are in this order: x, y, blur, color */
-}
-
-.btn:active{
-    transform: translateY(-.1rem);
-    box-shadow: 0 .5rem 1rem $color-primary-darkest;
-    /* By decreasing the value of 'Y' and blur as compared to hover state,
-    you give the illusion that the button is moving closer to the page and away 
-    from the user */
-}
-
-.btn--white{
-    background-color: whitesmoke;
-    color: rgb(110, 109, 109);
-    padding: 1.2rem 3.6rem;
-    display: inline-block;
-    /* Changing inline-text to inline-block */
-}
-
-.btn::after{
-    content: "";
-    display: inline-block;
-    height: 100%;  
-    /* This 100% of button's height */
-    width:100%;
-    border-radius: 10rem;
-    /* Same as button's border-radius */
-    /* This is a pseudo element that duplicates the look of the orginal button
-    It goes behind the button */
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    /* This puts the this element behind the first button */
-    transition: all .4s;
-    /* Using the transition property creates a more suble phasing in effect */
-}
-
-.btn-white::after{
-    background-color: whitesmoke;
-    /* Adding back color white to 'after' element */
-}
-
-.btn:hover::after{
-    transform: scaleX(1.1) scaleY(1.2);
-    /* Upon hover the after element should grow.  Using scale() to define growth value */
-    opacity: 0;
-}
-
-.btn--animated{
-    animation: transition-bottom 3s ease-out 4s backwards;
-}
-
-nav{
-    background-color:#ffb6c1;
-}
-
-li{
-    display: inline-block;
-
-}
-
-li:first-child{
-    font-size: 22px;
-}
-
-a{
-    text-decoration: none;
-    text-transform: uppercase;
-    color: #4b0082;
-    border: 2px solid $color-primary;
-}
+// a{
+//     text-decoration: none;
+//     text-transform: uppercase;
+//     color:  $color-primary;
+//     border: 2px solid $color-primary;
+// }

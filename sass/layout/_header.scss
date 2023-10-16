@@ -1,0 +1,35 @@
+.header{
+    height: 95vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(190, 159, 211, 0.4)),url(../images/japanese-garden.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+
+    &__box-logo{
+        position: absolute;
+        top: 4rem;
+        left: 4rem;
+    }
+
+   &__text-box{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    line-height: 2.5;
+    transform: translate(-10%, -50%);
+    /* transform/translate moves center of text box */
+    text-align: center;
+    } 
+}
+
+
+.logo{
+    height: 4rem;
+}
+.logo:hover{
+    animation: transition-left 4s ease-out;
+}
+
+
+

@@ -1,0 +1,73 @@
+.btn:link,
+.btn:visited{
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 10rem;
+    /* adding a high value for border-radius creates an oval shape */
+    transition: all .2s;
+    position: relative;
+}
+
+.btn:hover{
+    transform: translateY(-.3rem);
+    color: $color-primary;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+    /* For box-shadow values are in this order: x, y, blur, color */
+}
+
+.btn:active{
+    transform: translateY(-.1rem);
+    box-shadow: 0 .5rem 1rem $color-primary-darkest;
+    /* By decreasing the value of 'Y' and blur as compared to hover state,
+    you give the illusion that the button is moving closer to the page and away 
+    from the user */
+}
+
+.btn--white{
+    background-color: $color-primary-light;
+    color:  $color-btn;
+    padding: 1.2rem 3.6rem;
+    display: inline-block;
+    /* Changing inline-text to inline-block */
+}
+
+.btn::after{
+    content: "";
+    display: inline-block;
+    height: 100%;  
+    /* This 100% of button's height */
+    width:100%;
+    border-radius: 10rem;
+    /* Same as button's border-radius */
+    /* This is a pseudo element that duplicates the look of the orginal button
+    It goes behind the button */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    /* This puts the this element behind the first button */
+    transition: all .4s;
+    /* Using the transition property creates a more suble phasing in effect */
+}
+
+.btn-white::after{
+    background-color:  $color-primary-light;
+    /* Adding back color white to 'after' element */
+}
+
+.btn:hover::after{
+    transform: scaleX(1.1) scaleY(1.2);
+    /* Upon hover the after element should grow.  Using scale() to define growth value */
+    opacity: 0;
+}
+
+.btn--animated{
+    animation: transition-bottom 3s ease-out 4s backwards;
+}
+
+
+
+
+
+
+

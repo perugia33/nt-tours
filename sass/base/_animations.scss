@@ -1,0 +1,48 @@
+@keyframes transition-left{
+    0%{
+        opacity: 0;
+        transform: translate(-10rem);
+        /* Object is far off page and out of sight */
+    }
+
+    50%{
+        transform: translate(1rem);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0);
+        /* at zero, the element is at its original place */
+    } 
+        /* Added to first part of header to add fade-in from left */
+}
+
+@keyframes transition-right{
+    0%{
+        opacity: 0;
+        transform: translate(20rem);
+        /* Object is far off page and out of sight */
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0);
+        /* at zero, the element is at its original place */
+    } 
+    /* Added to second part of header to add fade-in from right */
+}
+
+@keyframes transition-bottom{
+    0%{
+        opacity: 0;
+        transform: translateY(3rem);
+        /* Object is far off page and out of sight */
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0);
+        /* at zero, the element is at its original place */
+    } 
+    /* Added to second part of header to add fade-in from right */
+}

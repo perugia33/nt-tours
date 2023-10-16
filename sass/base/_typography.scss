@@ -1,0 +1,23 @@
+.heading-primary{
+    text-transform: uppercase;
+    margin-bottom: 6rem;
+}
+
+.heading-primary--main{
+    display: block;
+    font-size: 4.5rem;
+    letter-spacing: 2.5rem;
+    font-weight: 400;
+    animation: transition-left 4s ease-out;
+}
+
+/* Here are the option for animation:  animation: name duration 
+timing-function delay iteration-count direction fill-mode; */
+.heading-primary--second{
+    display: block;
+    font-size: 2.2rem;
+    letter-spacing: 1.7rem;
+    font-weight: 700;
+    margin-left: 2rem;
+    animation: transition-right 2s  ease-in  2s backwards;  
+}
