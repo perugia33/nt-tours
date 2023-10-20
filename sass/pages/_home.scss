@@ -1,0 +1,26 @@
+.section-about{
+    background-color: $color-grey-light-1;
+    padding: 15rem 0;
+    color: $color-primary;
+}
+
+.container{
+    max-width: 114rem;
+    margin: 0 auto;
+    
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.flex-1-col-1{
+    width: calc((100% - 4rem) /2 );
+    margin-right: 2rem;
+    height: 40rem;
+}
+
+
+ .flex-1-col-2{
+    width: calc((100% - 4rem) /2 );
+    height: 40rem;
+}

@@ -54,15 +54,17 @@ html {
 /* Using a percentage ensures the users can change the default font-size.. The
 default font-size is 16px.   10px is the desired font size and 10 px is 62.5% of 16 */
 body {
+  box-sizing: border-box;
+  /* with box-sizing, border box , the content width will be reduce by the padding and border
+    instead of adding them to the specific width(default box-sizing) */ }
+
+body {
   font-family: "Lato" , sans-serif;
   font-weight: 400;
   font-size: 2.2rem;
   line-height: 1.5;
   color: #f5f5f5;
-  padding: 3rem;
-  box-sizing: border-box;
-  /* with box-sizing, border box , the content width will be reduce by the padding and border
-    instead of adding them to the specific with(defalut box-sizing) */ }
+  padding: 3rem; }
 
 .heading-primary {
   text-transform: uppercase;
@@ -84,6 +86,31 @@ timing-function delay iteration-count direction fill-mode; */
   font-weight: 700;
   margin-left: 2rem;
   animation: transition-right 2s  ease-in  2s backwards; }
+
+.heading-secondary {
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase; }
+
+.heading-tertiary {
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding-bottom: 1rem; }
+
+.paragraph {
+  font-size: 1.6rem;
+  color: #252525; }
+
+.utility-center-text {
+  text-align: center; }
+
+.utility-margin-bottom-8 {
+  margin-bottom: 8rem; }
+
+.utility-margin-bottom-3 {
+  margin-bottom: 3rem; }
 
 .btn:link,
 .btn:visited {
@@ -144,6 +171,30 @@ timing-function delay iteration-count direction fill-mode; */
 .btn--animated {
   animation: transition-bottom 3s ease-out 4s backwards; }
 
+.btn-text:link, .btn-text:visited {
+  text-decoration: none;
+  display: inline-block;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-bottom: 1px solid #4b0082;
+  border-radius: 10%;
+  padding: 5px;
+  font-size: 1.6rem;
+  letter-spacing: 7px;
+  transition: all .3s; }
+
+.btn-text:hover {
+  background-color: #0d7e7e;
+  color: #f5f5f5;
+  transform: translateY(-2px);
+  box-shadow: 0 1rem 1rem #00000033;
+  padding: .8rem; }
+
+.btn-text:active {
+  transform: translateY(-2px);
+  box-shadow: 0 0.5rem 1rem #00000033;
+  transform: translateY(0); }
+
 .header {
   height: 95vh;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(190, 159, 211, 0.4)), url(../images/japanese-garden.jpeg);
@@ -169,3 +220,23 @@ timing-function delay iteration-count direction fill-mode; */
 
 .logo:hover {
   animation: transition-left 4s ease-out; }
+
+.section-about {
+  background-color: #fdfcfcee;
+  padding: 15rem 0;
+  color: #4b0082; }
+
+.container {
+  max-width: 114rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between; }
+
+.flex-1-col-1 {
+  width: calc((100% - 4rem) /2);
+  margin-right: 2rem;
+  height: 40rem; }
+
+.flex-1-col-2 {
+  width: calc((100% - 4rem) /2);
+  height: 40rem; }

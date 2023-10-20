@@ -1,3 +1,13 @@
+body{
+    font-family: "Lato" , sans-serif;
+    font-weight: 400;
+    font-size: 2.2rem;
+    line-height: 1.5;
+    color: $color-primary-light;
+    padding: 3rem;
+}
+
+
 .heading-primary{
     text-transform: uppercase;
     margin-bottom: 6rem;
@@ -20,4 +30,26 @@ timing-function delay iteration-count direction fill-mode; */
     font-weight: 700;
     margin-left: 2rem;
     animation: transition-right 2s  ease-in  2s backwards;  
+}
+
+.heading-secondary{
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+   
+}
+
+.heading-tertiary{
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-bottom: 1rem;
+
+
+}
+
+.paragraph{
+    font-size: $font-size-small;
+    color: $color-dark-2;
 }

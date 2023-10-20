@@ -14,14 +14,8 @@ html{
 default font-size is 16px.   10px is the desired font size and 10 px is 62.5% of 16 */
 
 body{
-    font-family: "Lato" , sans-serif;
-    font-weight: 400;
-    font-size: 2.2rem;
-    line-height: 1.5;
-    color: $color-primary-light;
-    padding: 3rem;
     box-sizing: border-box;
     /* with box-sizing, border box , the content width will be reduce by the padding and border
-    instead of adding them to the specific with(defalut box-sizing) */
+    instead of adding them to the specific width(default box-sizing) */
 }
 
