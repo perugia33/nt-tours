@@ -1,0 +1,45 @@
+// About Section Trio of Photos start
+.design{
+    position: relative;
+  
+    &_photo{
+        width: 55%;
+        box-shadow: 0  1.5rem   2rem rgba($color-dark-2, .4) ;
+        // box shadow values =  x axis(horizontal), y axis(vertical),  blur, color & opacity
+        border-radius: 2px;
+        position: absolute;
+        z-index: 8;
+        transition: all .3s;
+    
+        &--p1{
+            left: 0;
+            top:  -2rem;
+        }
+
+        &--p2{
+            right:  0;
+            top:  2rem;
+        }
+
+        &--p3{
+            left: 15%;
+            top:  14rem;
+        }
+
+        &:hover{
+            transform: scale(1.05);
+            outline: 3px outset $color-primary-med;
+            box-shadow: 0  2.0rem   2rem rgba($color-dark-2, .5) ;
+            z-index:  12;
+        }
+
+    }   
+    &:hover  &_photo:not(:hover){
+        transform: scale(.9);
+    }
+
+    // Selector selects the block component ; the photo elements that were not hovered
+}
+
+
+
