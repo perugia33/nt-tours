@@ -1,0 +1,31 @@
+ .card-container{
+    background-color: rgba($color-primary-white, .7);
+    font-size: 1.5rem;
+    
+    padding: 2.5rem;
+    text-align: center;
+    height: 36rem;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem  3rem  rgba($color-dark-2, .15);
+    transition: transform .6s ease-in-out;
+
+
+    &_icon{
+        font-size: 6rem;
+        font-weight: 700;
+        margin-bottom: .5rem;
+        display: inline-block;
+        background-image: linear-gradient(to right, $color-green-med, $color-dark-2) ;
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+
+    &:hover{
+        transform: translateY(-1.0rem) scale(1.03);
+    }
+
+   
+
+   
+ 
+}
