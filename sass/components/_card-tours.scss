@@ -1,0 +1,51 @@
+.card-tours{
+    perspective: 150rem;
+    // perspective is applied to parent
+    -moz-perspective: 150rem;
+    // The -moz-perspective allows it to work in Firefox
+    position: relative;
+    text-align: center;
+    
+    &_side{
+        height: 50rem;
+         transition: all 3s;
+         width: 100%;
+         position: absolute;
+         top: 0;
+         left: 0;
+         backface-visibility: hidden;
+         border-radius: 3px;
+
+          &--front{
+            background-color: rgba($color-primary-light, .85);
+          }
+
+          &--back{
+            transform: rotateY(180deg);
+
+               &-1{
+              background-image: linear-gradient(to right bottom,  $color-secondary-violet,  $color-secondary-blue);
+            }
+
+            &-2{
+              background-image: linear-gradient(to right bottom,  $color-secondary-green-med,  $color-secondary-green-light);
+            }
+
+            &-3{
+              background-image: linear-gradient(to right bottom,  $color-secondary-pink-light,  $color-secondary-pink-med);
+            }
+
+
+
+          }
+    }
+
+    &:hover &_side--front {
+        transform: rotateY(180deg);
+    }
+
+    &:hover &_side--back {
+        transform: rotateY(0deg);
+    }
+
+}

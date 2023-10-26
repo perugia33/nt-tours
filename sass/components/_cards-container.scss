@@ -1,7 +1,6 @@
- .card-container{
+ .cards-container{
     background-color: rgba($color-primary-white, .7);
     font-size: 1.5rem;
-    
     padding: 2.5rem;
     text-align: center;
     height: 36rem;
@@ -23,9 +22,4 @@
     &:hover{
         transform: translateY(-1.0rem) scale(1.03);
     }
-
-   
-
-   
- 
 }

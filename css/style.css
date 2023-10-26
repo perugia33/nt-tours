@@ -197,7 +197,7 @@ timing-function delay iteration-count direction fill-mode; */
   box-shadow: 0 0.5rem 1rem #00000033;
   transform: translateY(0); }
 
-.card-container {
+.cards-container {
   background-color: rgba(255, 255, 255, 0.7);
   font-size: 1.5rem;
   padding: 2.5rem;
@@ -206,7 +206,7 @@ timing-function delay iteration-count direction fill-mode; */
   border-radius: 3px;
   box-shadow: 0 1.5rem 3rem rgba(37, 37, 37, 0.15);
   transition: transform .6s ease-in-out; }
-  .card-container_icon {
+  .cards-container_icon {
     font-size: 6rem;
     font-weight: 700;
     margin-bottom: .5rem;
@@ -214,8 +214,37 @@ timing-function delay iteration-count direction fill-mode; */
     background-image: linear-gradient(to right, #7A9D54, #252525);
     -webkit-background-clip: text;
     color: transparent; }
-  .card-container:hover {
+  .cards-container:hover {
     transform: translateY(-1rem) scale(1.03); }
+
+.card-tours {
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  text-align: center; }
+  .card-tours_side {
+    height: 50rem;
+    transition: all 3s;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    border-radius: 3px; }
+    .card-tours_side--front {
+      background-color: rgba(245, 245, 245, 0.85); }
+    .card-tours_side--back {
+      transform: rotateY(180deg); }
+      .card-tours_side--back-1 {
+        background-image: linear-gradient(to right bottom, #DBC4F0, #95BDFF); }
+      .card-tours_side--back-2 {
+        background-image: linear-gradient(to right bottom, #A8DF8E, #DFFFD8); }
+      .card-tours_side--back-3 {
+        background-image: linear-gradient(to right bottom, #F7C8E0, #bf3f81); }
+  .card-tours:hover .card-tours_side--front {
+    transform: rotateY(180deg); }
+  .card-tours:hover .card-tours_side--back {
+    transform: rotateY(0deg); }
 
 .design {
   position: relative; }
@@ -292,7 +321,7 @@ timing-function delay iteration-count direction fill-mode; */
 .section-cards {
   color: #252525;
   padding: 16rem 0;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(23, 44, 1, 0.109)), url(../images/pathway-water.jpeg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(23, 44, 1, 0.109)), url(../images/japan-nikko.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center; }
@@ -305,3 +334,14 @@ timing-function delay iteration-count direction fill-mode; */
 .flex-4-col-4 {
   width: calc((100% - 6rem) /4);
   padding: 3rem; }
+
+.section-tours {
+  color: #252525;
+  padding: 13rem 0;
+  margin-bottom: 20rem; }
+
+.flex-3-col-1, .flex-3-col-2, .flex-3-col-3 {
+  width: calc((100% - 4rem) /3);
+  margin-right: 2rem; }
+
+/* width is calculated  for 1st column as 100% of width minus the gutter;  divided by 3 ,*/
