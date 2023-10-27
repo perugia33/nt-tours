@@ -25,7 +25,7 @@
 .section-cards{
     color: $color-dark-2;
     padding: 16rem 0;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(23, 44, 1, 0.109)),url(../images/japan-nikko.jpeg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(23, 44, 1, 0.109)),url(../images/japan-nikko.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -54,7 +54,7 @@
 
 .flex-3-col-1,  .flex-3-col-2, .flex-3-col-3{
     width: calc((100% - 4rem) /3 );
-    margin-right: 2rem;
+    margin-right: 3rem;
     
 }
 /* width is calculated  for 1st column as 100% of width minus the gutter;  divided by 3 ,*/

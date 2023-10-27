@@ -221,16 +221,43 @@ timing-function delay iteration-count direction fill-mode; */
   perspective: 150rem;
   -moz-perspective: 150rem;
   position: relative;
-  text-align: center; }
+  text-align: center;
+  height: 64rem; }
+  .card-tours_heading {
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #2c014b;
+    text-align: right;
+    position: absolute;
+    top: 19rem;
+    right: 2rem; }
+  .card-tours_details--heading {
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #2c014b; }
+  .card-tours_details ul {
+    list-style: none;
+    width: 80%;
+    margin: 0 auto; }
+    .card-tours_details ul li {
+      text-align: center;
+      font-size: 1.7rem;
+      padding: 1rem;
+      color: #2c014b; }
+      .card-tours_details ul li:not(:last-child) {
+        border-bottom: 1px solid #cdcccc; }
   .card-tours_side {
-    height: 50rem;
+    height: 64rem;
     transition: all 3s;
     width: 100%;
     position: absolute;
     top: 0;
     left: 0;
     backface-visibility: hidden;
-    border-radius: 3px; }
+    border-radius: 3px;
+    overflow: hidden; }
     .card-tours_side--front {
       background-color: rgba(245, 245, 245, 0.85); }
     .card-tours_side--back {
@@ -240,11 +267,21 @@ timing-function delay iteration-count direction fill-mode; */
       .card-tours_side--back-2 {
         background-image: linear-gradient(to right bottom, #A8DF8E, #DFFFD8); }
       .card-tours_side--back-3 {
-        background-image: linear-gradient(to right bottom, #F7C8E0, #bf3f81); }
+        background-image: linear-gradient(to right bottom, #F7C8E0, #c65d93); }
   .card-tours:hover .card-tours_side--front {
-    transform: rotateY(180deg); }
+    transform: rotateY(-180deg); }
   .card-tours:hover .card-tours_side--back {
     transform: rotateY(0deg); }
+  .card-tours_image {
+    background-size: cover;
+    height: 25rem;
+    background-blend-mode: overlay; }
+    .card-tours_image-1 {
+      background-image: linear-gradient(to right bottom, #A8DF8E, #DBC4F0), url(../images/japanese-forest-2.jpeg); }
+    .card-tours_image-2 {
+      background-image: linear-gradient(to right bottom, #A8DF8E, #172c01), url(../images/cotswold-stanton.jpeg); }
+    .card-tours_image-3 {
+      background-image: linear-gradient(to right bottom, #A8DF8E, #172c01), url(../images/madeira-coastline.jpeg); }
 
 .design {
   position: relative; }
@@ -321,7 +358,7 @@ timing-function delay iteration-count direction fill-mode; */
 .section-cards {
   color: #252525;
   padding: 16rem 0;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(23, 44, 1, 0.109)), url(../images/japan-nikko.jpeg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(23, 44, 1, 0.109)), url(../images/japan-nikko.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center; }
@@ -342,6 +379,6 @@ timing-function delay iteration-count direction fill-mode; */
 
 .flex-3-col-1, .flex-3-col-2, .flex-3-col-3 {
   width: calc((100% - 4rem) /3);
-  margin-right: 2rem; }
+  margin-right: 3rem; }
 
 /* width is calculated  for 1st column as 100% of width minus the gutter;  divided by 3 ,*/

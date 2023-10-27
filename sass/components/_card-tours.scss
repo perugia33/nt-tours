@@ -5,9 +5,47 @@
     // The -moz-perspective allows it to work in Firefox
     position: relative;
     text-align: center;
+    height: 64rem;
+
+    &_heading{
+      font-size: 2rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: $color-primary-dark;
+      text-align: right;
+      position: absolute;
+      top: 19rem;
+      right: 2rem;
+    }
+
+    &_details{
+
+      &--heading{
+        font-size: 1.8rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: $color-primary-dark;
+      }
+
+        ul{
+            list-style: none;
+            width: 80%;
+            margin: 0 auto;
+                
+            li{
+              text-align: center;
+              font-size: 1.7rem;
+              padding: 1rem;
+              color: $color-primary-dark;
+                &:not(:last-child){
+                  border-bottom: 1px solid $color-grey-med-1;
+                }             
+            }
+        }
+    }
     
     &_side{
-        height: 50rem;
+        height: 64rem;
          transition: all 3s;
          width: 100%;
          position: absolute;
@@ -15,6 +53,7 @@
          left: 0;
          backface-visibility: hidden;
          border-radius: 3px;
+         overflow: hidden;
 
           &--front{
             background-color: rgba($color-primary-light, .85);
@@ -22,6 +61,7 @@
 
           &--back{
             transform: rotateY(180deg);
+           
 
                &-1{
               background-image: linear-gradient(to right bottom,  $color-secondary-violet,  $color-secondary-blue);
@@ -41,11 +81,38 @@
     }
 
     &:hover &_side--front {
-        transform: rotateY(180deg);
+        transform: rotateY(-180deg);
     }
+
+     // negative values allow movement in the opposite direction
+
 
     &:hover &_side--back {
         transform: rotateY(0deg);
     }
+
+    &_image{
+          background-size: cover;
+          height: 25rem;
+          background-blend-mode:overlay;
+      &-1{
+        background-image:  linear-gradient(to right bottom,  $color-secondary-green-med,  $color-secondary-violet) ,
+         url(../images/japanese-forest-2.jpeg);
+      }
+
+       &-2{
+        background-image: linear-gradient(to right bottom,  $color-secondary-green-med,  $color-green-darkest),
+             url(../images/cotswold-stanton.jpeg);
+       }
+
+       &-3{
+        background-image: linear-gradient(to right bottom,  $color-secondary-green-med,  $color-green-darkest),
+             url(../images/madeira-coastline.jpeg);
+       }
+
+
+    }
+
+
 
 }
