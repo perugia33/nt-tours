@@ -39,19 +39,26 @@ timing-function delay iteration-count direction fill-mode; */
     text-transform: uppercase;
 
     &:hover{
-        transform: scale(1.02);
-    
+        transform: scale(1.02);  
+    }  
+
+    &-2{
+        font-family: "Playbill";
+        color: $color-primary;
+        &:hover{
+            transform: scale(1.02);  
+        }  
+
     }
-   
 }
+
+
 
 .heading-tertiary{
     font-size: 1.7rem;
     font-weight: 800;
     text-transform: uppercase;
     padding-bottom: 1rem;
-
-
 }
 
 .paragraph{

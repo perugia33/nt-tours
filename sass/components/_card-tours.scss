@@ -23,9 +23,12 @@
       &--heading{
         font-size: 1.8rem;
         font-weight: 600;
+        font-family: "Playbill";
         text-transform: uppercase;
         color: $color-primary-dark;
       }
+
+    
 
         ul{
             list-style: none;
@@ -91,28 +94,62 @@
         transform: rotateY(0deg);
     }
 
+    // Front-side Styles
+
     &_image{
           background-size: cover;
           height: 25rem;
           background-blend-mode:overlay;
-      &-1{
-        background-image:  linear-gradient(to right bottom,  $color-secondary-green-med,  $color-secondary-violet) ,
-         url(../images/japanese-forest-2.jpeg);
-      }
+          &-1{
+            background-image:  linear-gradient(to right bottom,  $color-secondary-green-med,  $color-secondary-violet) ,
+            url(../images/japanese-forest-2.jpeg);
+          }
 
-       &-2{
-        background-image: linear-gradient(to right bottom,  $color-secondary-green-med,  $color-green-darkest),
-             url(../images/cotswold-stanton.jpeg);
-       }
+          &-2{
+            background-image: linear-gradient(to right bottom,  $color-secondary-green-med,  $color-green-darkest),
+                url(../images/cotswold-stanton.jpeg);
+          }
 
-       &-3{
-        background-image: linear-gradient(to right bottom,  $color-secondary-green-med,  $color-green-darkest),
-             url(../images/madeira-coastline.jpeg);
-       }
+          &-3{
+            background-image: linear-gradient(to right bottom,  $color-secondary-green-med,  $color-green-darkest),
+                url(../images/madeira-coastline.jpeg);
+          }
 
 
     }
 
+    // Back-side Styles
+
+      &_action{
+          position: absolute;
+          top: 40%;
+          left: 50%;
+          transform: translate(-50% , -50%);
+          width: 90%;
+        
+      }
+      &_price-container{
+          margin-bottom: 7rem;
+      }
+
+      &_price-heading{
+        font-family: "Playbill";
+        font-size: 3rem;
+        padding: 2rem;
+      }
+
+      &_price-icon{
+        font-size: 4rem;
+      }
+
+      &_price-cost{
+        font-size: 4rem;
+        font-weight: 200;
+
+      }
+
+   }
 
 
-}
+
+

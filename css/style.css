@@ -94,6 +94,11 @@ timing-function delay iteration-count direction fill-mode; */
   text-transform: uppercase; }
   .heading-secondary:hover {
     transform: scale(1.02); }
+  .heading-secondary-2 {
+    font-family: "Playbill";
+    color: #4b0082; }
+    .heading-secondary-2:hover {
+      transform: scale(1.02); }
 
 .heading-tertiary {
   font-size: 1.7rem;
@@ -235,6 +240,7 @@ timing-function delay iteration-count direction fill-mode; */
   .card-tours_details--heading {
     font-size: 1.8rem;
     font-weight: 600;
+    font-family: "Playbill";
     text-transform: uppercase;
     color: #2c014b; }
   .card-tours_details ul {
@@ -282,6 +288,23 @@ timing-function delay iteration-count direction fill-mode; */
       background-image: linear-gradient(to right bottom, #A8DF8E, #172c01), url(../images/cotswold-stanton.jpeg); }
     .card-tours_image-3 {
       background-image: linear-gradient(to right bottom, #A8DF8E, #172c01), url(../images/madeira-coastline.jpeg); }
+  .card-tours_action {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%; }
+  .card-tours_price-container {
+    margin-bottom: 7rem; }
+  .card-tours_price-heading {
+    font-family: "Playbill";
+    font-size: 3rem;
+    padding: 2rem; }
+  .card-tours_price-icon {
+    font-size: 4rem; }
+  .card-tours_price-cost {
+    font-size: 4rem;
+    font-weight: 200; }
 
 .design {
   position: relative; }
