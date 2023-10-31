@@ -49,7 +49,7 @@
 .section-tours{
     color: $color-dark-2;
     padding: 13rem 0;
-    margin-bottom: 20rem;
+    margin-bottom: 2rem;
 }
 
 .flex-3-col-1,  .flex-3-col-2, .flex-3-col-3{
@@ -58,5 +58,12 @@
     
 }
 /* width is calculated  for 1st column as 100% of width minus the gutter;  divided by 3 ,*/
+
+.section-stories{
+    padding: 15rem 0;
+    background-color: $color-grey-light-1;
+    color: $color-primary;
+
+}
 
 
