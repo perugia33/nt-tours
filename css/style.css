@@ -100,6 +100,12 @@ timing-function delay iteration-count direction fill-mode; */
     .heading-secondary-2:hover {
       transform: scale(1.02); }
 
+.heading-secondary-3 {
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase; }
+
 .heading-tertiary {
   font-size: 1.7rem;
   font-weight: 800;
@@ -108,6 +114,7 @@ timing-function delay iteration-count direction fill-mode; */
 
 .heading-tertiary-2 {
   font-size: 2rem;
+  letter-spacing: 3px;
   font-weight: 800;
   text-transform: uppercase;
   padding-bottom: 1rem; }
@@ -115,6 +122,9 @@ timing-function delay iteration-count direction fill-mode; */
 .paragraph {
   font-size: 1.6rem;
   color: #252525; }
+
+.ff-playbill {
+  font-family: "Playbill"; }
 
 .utility-center-text {
   text-align: center; }
@@ -128,6 +138,23 @@ timing-function delay iteration-count direction fill-mode; */
 .utility-margin-top-8 {
   margin-top: 8rem; }
 
+.utility-margin-top-3 {
+  margin-top: 3rem; }
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: .5;
+  overflow: hidden; }
+  .bg-video_content {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; }
+
 .btn:link,
 .btn:visited {
   text-transform: uppercase;
@@ -135,7 +162,8 @@ timing-function delay iteration-count direction fill-mode; */
   border-radius: 10rem;
   /* adding a high value for border-radius creates an oval shape */
   transition: all .2s;
-  position: relative; }
+  position: relative;
+  font-weight: 700; }
 
 .btn:hover {
   transform: translateY(-0.3rem);
@@ -341,6 +369,9 @@ timing-function delay iteration-count direction fill-mode; */
   .design:hover .design_photo:not(:hover) {
     transform: scale(0.9); }
 
+.form {
+  color: #2c014b; }
+
 .story {
   width: 75%;
   margin: 0 auto;
@@ -348,7 +379,8 @@ timing-function delay iteration-count direction fill-mode; */
   border-radius: 3px;
   background-color: #f5f5f5;
   padding: 6rem;
-  padding-left: 5rem; }
+  padding-left: 5rem;
+  border: 1px dashed #2c014b; }
   .story_circle {
     width: 16rem;
     height: 16rem;
@@ -465,6 +497,31 @@ timing-function delay iteration-count direction fill-mode; */
 
 /* width is calculated  for 1st column as 100% of width minus the gutter;  divided by 3 ,*/
 .section-stories {
+  position: relative;
   padding: 15rem 0;
-  background-color: #fdfcfcee;
-  color: #4b0082; }
+  color: #4b0082;
+  margin-bottom: 8rem; }
+
+.story-container {
+  max-width: 114rem;
+  margin: 0 auto;
+  margin-bottom: 3rem; }
+
+.section-booking {
+  background-image: linear-gradient(to right bottom, #7A9D54, #172c01);
+  padding: 15rem 0; }
+
+.booking {
+  background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url(../images/cotswold-arlington-row.jpeg);
+  height: 50rem;
+  border-radius: 3px;
+  background-size: cover;
+  box-shadow: 0 1.5rem 3rem rgba(37, 37, 37, 0.2); }
+  .bookingform {
+    width: 50%;
+    padding: 6rem; }
+
+.booking-container {
+  max-width: 114rem;
+  margin: 0 auto;
+  margin-bottom: 3rem; }

@@ -52,6 +52,13 @@ timing-function delay iteration-count direction fill-mode; */
     }
 }
 
+.heading-secondary-3{
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
 
 
 .heading-tertiary{
@@ -63,6 +70,7 @@ timing-function delay iteration-count direction fill-mode; */
 
 .heading-tertiary-2{
     font-size: 2rem;
+    letter-spacing: 3px;
     font-weight: 800;
     text-transform: uppercase;
     padding-bottom: 1rem;
@@ -71,4 +79,8 @@ timing-function delay iteration-count direction fill-mode; */
 .paragraph{
     font-size: $font-size-small;
     color: $color-dark-2;
+}
+
+.ff-playbill{
+    font-family: "Playbill";
 }

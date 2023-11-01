@@ -60,10 +60,57 @@
 /* width is calculated  for 1st column as 100% of width minus the gutter;  divided by 3 ,*/
 
 .section-stories{
+    position: relative;
     padding: 15rem 0;
-    background-color: $color-grey-light-1;
     color: $color-primary;
+    margin-bottom: 8rem;
 
 }
+
+.story-container{
+    max-width: 114rem;
+    margin: 0 auto;  
+    margin-bottom: 3rem;
+}
+
+
+.section-booking{
+    background-image: linear-gradient(to right bottom,$color-green-med,  $color-green-light);
+    padding: 15rem 0;
+}
+
+.booking{
+    background-image: linear-gradient( 90deg,  
+                                                    rgba($color-primary-white, .9) 0%,
+                                                    rgba($color-primary-white, .9) 50%,
+                                                    transparent 50%),
+                                                     url(../images/cotswold-arlington-row.jpeg);
+    
+    // At 90 degrees, the gradient goes from left to right.  Each color in the gradient is given a percentage
+    //  at which the color should be applied. By giving the second and third colors ths same %,
+    // you create a solid line- 
+    height: 50rem;
+    border-radius: 3px;
+    background-size: cover;
+    box-shadow: 0 1.5rem  3rem  rgba($color-dark-2, .2);
+
+    &form{
+        width: 50%;
+        padding: 6rem;
+      
+    }
+}
+
+
+
+.booking-container{
+    max-width: 114rem;
+    margin: 0 auto;  
+    margin-bottom: 3rem;
+
+}
+
+
+
 
 
