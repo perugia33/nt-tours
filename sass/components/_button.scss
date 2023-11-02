@@ -1,3 +1,4 @@
+.btn,
 .btn:link,
 .btn:visited{
     text-transform: uppercase;
@@ -7,6 +8,9 @@
     transition: all .2s;
     position: relative;
     font-weight: 700;
+
+    border: none;
+    cursor: pointer;
 }
 
 .btn:hover{
@@ -32,6 +36,15 @@
     /* Changing inline-text to inline-block */
 }
 
+.btn--indigo{
+    color: $color-primary-light;
+    background-color:  $color-primary-med;
+    padding: 1.2rem 3.0rem;
+    display: inline-block;
+    margin-top: 4rem;
+    /* Changing inline-text to inline-block */
+}
+
 .btn::after{
     content: "";
     display: inline-block;
@@ -54,6 +67,11 @@
 .btn-white::after{
     background-color:  $color-primary-light;
     /* Adding back color white to 'after' element */
+}
+
+.btn--indigo:hover{
+    background-color:  $color-primary-white;
+    color: $color-primary-med;
 }
 
 .btn:hover::after{

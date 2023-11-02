@@ -89,15 +89,14 @@
     // At 90 degrees, the gradient goes from left to right.  Each color in the gradient is given a percentage
     //  at which the color should be applied. By giving the second and third colors ths same %,
     // you create a solid line- 
-    height: 50rem;
+    height: 65rem;
     border-radius: 3px;
     background-size: cover;
     box-shadow: 0 1.5rem  3rem  rgba($color-dark-2, .2);
 
-    &form{
+    &_form{
         width: 50%;
-        padding: 6rem;
-      
+        padding: 6rem;      
     }
 }
 
@@ -107,7 +106,6 @@
     max-width: 114rem;
     margin: 0 auto;  
     margin-bottom: 3rem;
-
 }
 
 
