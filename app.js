@@ -1,21 +1,37 @@
+const fs = require('fs')
 const express = require('express');
 
 const app = express();
+app.use(express.json());
 
+const tours = JSON.parse(fs.readFileSync(`${__dirname}/dev-data/data/tours-simple.json` ));
 
-app.get('/', (req, res)=> {
-    res.status(200).json({message:"Hello from the server", app: "NT-Tours"});
+app.get('/api/v1/tours', (req, res)=>{
+        res.status(200).json({
+            status: 'sucess',
+            results: tours.length,
+            data: {
+                tours
+            }
+        });
 });
 
-app.post('/', (req, res)=> {
-    res.send("You can send a post here");
+app.post('/api/v1/tours', (req, res)=>{
+   const newId = tours[tours.length -1].id  + 1;
+   const newTour = Object.assign({id: newId}, req.body);
+
+   tours.push(newTour);
+
+   fs.writeFile(`${__dirname}/dev-data/data/tours-simple.json`, JSON.stringify(tours, null, 2), err=>{
+        res.status(201).json({
+            status: 'sucess',
+            data: {
+                newTour
+            }
+        });
+
+   })
 });
-
-
-
-
-
-
 
 
 const port = 3000;
