@@ -1,15 +1,39 @@
 const fs = require('fs')
 const express = require('express');
+const morgan = require('morgan');
 
 const app = express();
+
+
+// MIDDLEWARE
+
+app.use(morgan("combined"));
+
 app.use(express.json());
+app.use((req,  res ,  next) =>{
+        console.log("Hello from the middleware");
+        next();
+});
+
+app.use((req,  res ,  next) => {
+    req.requestTime =  new Date().toISOString();
+    // Adding the current time to the request body
+    next();
+});
+// creating a custom middleware function
+
+
 
 const tours = JSON.parse(fs.readFileSync(`${__dirname}/dev-data/data/tours-simple.json` ));
 
+// ROUTE HANDLERS
+
 // Get all Tours
 const getAllTours = (req, res)=>{
+    console.log(req.requestTime);
     res.status(200).json({
     status: 'sucess',
+    requestedAt: req.requestTime,
     results: tours.length,
     data: {
         tours
@@ -72,39 +96,86 @@ const createNewTour =   (req, res)=>{
         });
     }   
 
-        // Delete Tour 
-        const deleteTour =   (req, res)=> {
-            if(req.params.id * 1  >  tours.length){
-                return res.status(404).json({
-                    status:'fail',
-                    message: 'Invalid Id'
-                })
-             };
-            res.status(204).json({   
-                    status: 'sucess',
-                    data:  null
-            });   
-     }
+// Delete Tour 
+const deleteTour =   (req, res)=> {
+    if(req.params.id * 1  >  tours.length){
+        return res.status(404).json({
+            status:'fail',
+            message: 'Invalid Id'
+        })
+        };
+    res.status(204).json({   
+            status: 'sucess',
+            data:  null
+    });   
+}
 
-// Routes
-// app.get('/api/v1/tours', getAllTours);
-// app.get('/api/v1/tours/:id',  getTourById);
-// app.post('/api/v1/tours', createNewTour);
-// app.patch('/api/v1/tours/:id', updateTour);
-// app.delete('/api/v1/tours/:id', deleteTour);
+//  Get All Users
+const getAllUsers =   (req, res)=> {
+    return res.status(500).json({
+        status:'error',
+        message: 'This route is under development'
+    })
+    };
+
+    //  Create a User
+const createUser =   (req, res)=> {
+    return res.status(500).json({
+        status:'error',
+        message: 'This route is under development'
+    })
+    };
+
+     //  Get a User
+const getUser =   (req, res)=> {
+    return res.status(500).json({
+        status:'error',
+        message: 'This route is under development'
+    })
+    };   
+
+     //  Update  User's details
+     const updateUser =   (req, res)=> {
+        return res.status(500).json({
+            status:'error',
+            message: 'This route is under development'
+        })
+        };      
+        
+    //  Delete User
+    const deleteUser =   (req, res)=> {
+    return res.status(500).json({
+        status:'error',
+        message: 'This route is under development'
+    })
+    };       
+
+// ROUTES
 
 app
     .route('/api/v1/tours')
     .get(getAllTours)
     .post(createNewTour);
 
-    app
+app
     .route('/api/v1/tours/:id')
     .get(getTourById)
     .patch(updateTour)
     .delete(deleteTour);
 
+ app
+    .route('/api/v1/users')
+    .get(getAllUsers)
+    .post(createUser);
 
+app
+    .route('/api/v1/users/:id')
+    .get(getUser)
+    .patch(updateUser)
+    .delete(deleteUser);
+
+
+    // Start Server
 const port = 3000;
 app.listen( port, ( )=> {
     console.log(`App running on port ${port}....`);

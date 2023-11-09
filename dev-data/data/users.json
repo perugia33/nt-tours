@@ -1,0 +1,23 @@
+[
+    {
+      "_id" :  "3e57d1a9",
+      "name":  "Janice Spencer",
+      "email":   "venture@example.com",
+      "role":      "admin"
+    },    
+     
+    {
+        "_id" :  "a8f9c2b4",
+        "name":  "Mark Underwood",
+        "email":   "maUnder@example.com",
+        "role":      "user"
+      } ,   
+        
+      {
+        "_id" :  "6d1b5e8f",
+        "name":  "Azara Westin",
+        "email":   "Mswest@example.com",
+        "role":      "user"
+      }    
+
+]

@@ -55,5 +55,11 @@
     "name": "Test Tour",
     "duration": 9,
     "difficulty": "medium"
+  },
+  {
+    "id": 8,
+    "name": "Test Tour",
+    "duration": 3,
+    "difficulty": "difficult"
   }
 ]
