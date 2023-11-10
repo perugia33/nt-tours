@@ -6,6 +6,7 @@
   "scripts": {
     "compile:sass": "node-sass sass/main.scss   css/style.css",
     "watch:sass": "node-sass -w   sass/main.scss  css/style.css",
+
     "start:dev": "nodemon server.js",
     "start:prod": "NODE_ENV=production nodemon server.js"
   },
@@ -19,6 +20,7 @@
     "url": "https://github.com/perugia33/nt-tours/issues"
   },
   "homepage": "https://github.com/perugia33/nt-tours#readme",
+  
   "devDependencies": {
     "node-sass": "^9.0.0",
     "nodemon": "^3.0.1"
