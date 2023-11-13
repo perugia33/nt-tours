@@ -10,7 +10,7 @@ router.param('id', tourController.verifyID);
 router
     .route('/')
     .get(tourController.getAllTours)
-    .post(tourController.createNewTour);
+    .post( tourController.checkReqBody, tourController.createNewTour);
 
  router
     .route('/:id')
