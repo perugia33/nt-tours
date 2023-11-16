@@ -1,32 +1,33 @@
 const fs = require('fs');
+const Tour = require('./../models/tourModel');
 
-const tours = JSON.parse(
-    fs.readFileSync(`${__dirname}/../dev-data/data/tours-simple.json`),
-);
+// const tours = JSON.parse(
+//     fs.readFileSync(`${__dirname}/../dev-data/data/tours-simple.json`),
+// );
 
 //  MIDDLEWARE
 // Validate Id
-exports.verifyID = (req, res, next, val) => {
-    console.log(`Tour Id is :  ${val} `);
-    if (req.params.id * 1 > tours.length) {
-        return res.status(404).json({
-            status: 'fail',
-            message: 'Invalid Id',
-        });
-    }
-    next();
-};
+// exports.verifyID = (req, res, next, val) => {
+//     console.log(`Tour Id is :  ${val} `);
+//     if (req.params.id * 1 > tours.length) {
+//         return res.status(404).json({
+//             status: 'fail',
+//             message: 'Invalid Id',
+//         });
+//     }
+//     next();
+// };
 // val = the value of the parameter. Consolidates the tour ID verification logic into a single middleware function
 
-exports.checkReqBody = (req, res, next) => {
-    if (!req.body.name || !req.body.price) {
-        return res.status(400).json({
-            status: 'fail',
-            message: 'Missing name or price',
-        });
-    }
-    next();
-};
+// exports.checkReqBody = (req, res, next) => {
+//     if (!req.body.name || !req.body.price) {
+//         return res.status(400).json({
+//             status: 'fail',
+//             message: 'Missing name or price',
+//         });
+//     }
+//     next();
+// };
 
 // ROUTE HANDLERS
 
