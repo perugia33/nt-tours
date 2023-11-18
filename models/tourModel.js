@@ -1,21 +1,20 @@
 const mongoose = require('mongoose');
 
-
 // Schema
-tourSchema =  mongoose.Schema({
+tourSchema = mongoose.Schema({
     name: {
         type: String,
-        required: [true, 'Enter the tour name'],     
-        unique: true
+        required: [true, 'Enter the tour name'],
+        unique: true,
     },
 
     duration: {
-        type:String
+        type: String,
     },
 
-    price:  {
+    price: {
         type: Number,
-        required: [true, "Enter the tour's price"] 
+        required: [true, "Enter the tour's price"],
     },
 
     difficulty: {
@@ -24,7 +23,7 @@ tourSchema =  mongoose.Schema({
 
     summary: {
         type: String,
-        required: [true, 'The tour-summary is required ']
+        required: [true, 'The tour-summary is required '],
     },
 
     description: {
@@ -32,32 +31,31 @@ tourSchema =  mongoose.Schema({
     },
 
     ratingsAverage: {
-        type: Number
-    }
-
+        type: Number,
+    },
 });
 
 // Model
 const Tour = mongoose.model('Tour', tourSchema);
 
-const testTour = new  Tour({
-    name: "Happy Camper Test",
-    duration: "15 days & 14 nights",
+const testTour = new Tour({
+    name: 'Happy Camper Test',
+    duration: '15 days & 14 nights',
     price: 1350,
-    difficulty: "moderate",
-    summary: "Wander the Quintessentially English Cotswolds Trail ",
-    description: "Discover the enchanting beauty of the Cotswolds. Embark on a 5-day walk through the idyllic Cotswolds region in Gloucester, England. Immerse yourself in quintessentially English country inns, explore ancient commons, and meander through honey-colored villages. ",
-    ratingsAverage: 5.0
+    difficulty: 'moderate',
+    summary: 'Wander the Quintessentially English Cotswolds Trail ',
+    description:
+        'Discover the enchanting beauty of the Cotswolds. Embark on a 5-day walk through the idyllic Cotswolds region in Gloucester, England. Immerse yourself in quintessentially English country inns, explore ancient commons, and meander through honey-colored villages. ',
+    ratingsAverage: 5.0,
 });
 
-
-testTour.save().then(doc => {
-    console.log(doc);
-}).catch(err => {
-    console.log('Error : ', err)
-})
-
-
-const Tour = mongoose.model('Tour', tourSchema);
+testTour
+    .save()
+    .then((doc) => {
+        console.log(doc);
+    })
+    .catch((err) => {
+        console.log('Error : ', err);
+    });
 
 module.exports = Tour;
