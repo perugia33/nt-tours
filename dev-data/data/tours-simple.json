@@ -3,7 +3,7 @@
     "id": 0,
     "name": "Mystical Kumano Kodo Trail",
     "duration": "6 days & 5 nights",
-    "price": "1975",
+    "price": 1975 ,
     "difficulty": "difficult",
     "summary": "Explore the  Mystical Kumano Kodo Trail in rural Japan",
     "description": "Journey through the Kansai region of Japan on a 6-day adventure. Immerse yourself in the rich history and spirituality of the area as you stay in traditional ryokans or minshukus. Walk ancient 1000-year-old trails, uncovering rural villages, sacred temples, and rejuvenating hot springs along the way.",
@@ -13,7 +13,7 @@
     "id": 1,
     "name": "Enchanting Cotswolds Trail",
     "duration": "5 days & 4 nights",
-    "price": "3350",
+    "price": 3350,
     "difficulty": "moderate",
     "summary": "Wander the Quintessentially English Cotswolds Trail ",
     "description": "Discover the enchanting beauty of the Cotswolds. Embark on a 5-day walk through the idyllic Cotswolds region in Gloucester, England. Immerse yourself in quintessentially English country inns, explore ancient commons, and meander through honey-colored villages. ",
@@ -23,43 +23,10 @@
     "id": 2,
     "name": "Colorful Madeira Island",
     "duration": "8 days & 7 nights",
-    "price": "2275",
+    "price": 2275,
     "difficulty": "moderate",
     "summary": "Walk through Colorful Madeira Island in Portugal's charming archipelago",
     "description": "Take a wonderful timeout  in the picturesque Madeira Archipelago, Portugal. Enjoy comfortable stays in 4-star hotels or charming manor houses. Explore the flower-filled landscapes of Madeira on foot, and take a dip in the natural pools created by volcanic lava formations. Experience the vibrant colors and beauty of Madeira Island while walking through its enchanting scenery.",
     "ratingsAverage": 4.7
-  },
-  {
-    "id": 3,
-    "name": "Test Tour",
-    "duration": 7,
-    "difficulty": "easy"
-  },
-  {
-    "id": 4,
-    "name": "Test Tour2",
-    "duration": 5,
-    "difficulty": "easy"
-  },
-  {
-    "id": 5,
-    "name": "Test Tour4",
-    "duration": 3,
-    "difficulty": "easy"
-  },
-  {
-    "id": 6
-  },
-  {
-    "id": 7,
-    "name": "Test Tour",
-    "duration": 9,
-    "difficulty": "medium"
-  },
-  {
-    "id": 8,
-    "name": "Test Tour",
-    "duration": 3,
-    "difficulty": "difficult"
   }
 ]
