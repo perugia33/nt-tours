@@ -1,64 +1,27 @@
 const fs = require('fs');
 const Tour = require('./../models/tourModel');
 
+const APIFeatures = require('./../utils/apiFeatures');
+
+exports.aliasTopTours = (req, res, next) => {
+    req.query.limit = '3';
+    req.query.sort = '-ratingsAverage, price';
+    req.query.fields = 'name, price, ratingsAverage, summary, difficulty';
+    next();
+};
+
 // ROUTE HANDLERS
 
 // Get all Tours
 exports.getAllTours = async (req, res) => {
     try {
-        // eslint-disable-next-line node/no-unsupported-features/es-syntax
-        const queryObj = { ...req.query };
-        const excludedFields = ['page', 'sort', 'limit', 'fields'];
-        excludedFields.forEach((el) => delete queryObj[el]);
-        // console.log()
-
-        let queryString = JSON.stringify(queryObj);
-
-        let query = Tour.find(JSON.parse(queryString));
-        console.log(JSON.parse(queryString));
-
-        // Sorting
-        if (req.query.sort) {
-            const sortBy = req.query.sort.split(' , ').join('   ');
-            query = query.sort(sortBy);
-        } else {
-            query = query.sort('-createAt');
-        }
-
-        // field limiting
-        if (req.query.fields) {
-            const fields = req.query.fields.split(' , ').join(' ');
-            query = query.select(fields);
-        } else {
-            query = query.select('-__v');
-        }
-
-        // Pagination
-        // defiining default value
-        const page = req.query.page * 1 || 1;
-        const limit = req.query.limit * 1 || 10;
-        const skip = (page - 1) * limit;
-        // calculating skip
-        query = query.skip(skip).limit(limit);
-        if (req.query.page) {
-            const numTours = await Tour.countDocuments();
-            if (skip >= numTours) throw new Error('This page does not exist');
-        }
-
-        // Sorting
-        // if (req.query.sort) {
-        //     const sortBy = req.query.sort.split(',').join(' '); // Handling multiple sorting fields
-        //     query = query.sort(sortBy);
-        // }
-
-        const tours = await query;
-        // if (queryObj.price) {
-        //     pric
-        // }
-        //  Tour.find({
-        // price: { $gte: parseInt(gte) },
-        // .where('price').gte(2000); Mongoose Query Method
-        // .where('difficulty').equals('easy')
+        // Execute query
+        const features = new APIFeatures(Tour.find(), req.query)
+            .filter()
+            .sort()
+            .limitFields()
+            .paginate();
+        const tours = await features.query;
         res.status(200).json({
             status: 'success',
             results: tours.length,
@@ -74,11 +37,6 @@ exports.getAllTours = async (req, res) => {
     }
 };
 
-// @@@@ const tours = await Tour.find({
-    // price: { $gte: parseInt(gte) || 2000 },
-// });
-// MongoDb Query method
-// Get Tour by Id
 exports.getTourById = async (req, res) => {
     try {
         const tour = await Tour.findById(req.params.id);
