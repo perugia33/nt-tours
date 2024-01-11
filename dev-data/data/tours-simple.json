@@ -7,7 +7,8 @@
     "difficulty": "difficult",
     "summary": "Explore the  Mystical Kumano Kodo Trail in rural Japan",
     "description": "Journey through the Kansai region of Japan on a 6-day adventure. Immerse yourself in the rich history and spirituality of the area as you stay in traditional ryokans or minshukus. Walk ancient 1000-year-old trails, uncovering rural villages, sacred temples, and rejuvenating hot springs along the way.",
-    "ratingsAverage": 4.8
+    "ratingsAverage": 4.8,
+    "ratingsQuantity": 14
   },
   {
     "id": 1,
@@ -17,7 +18,8 @@
     "difficulty": "moderate",
     "summary": "Wander the Quintessentially English Cotswolds Trail ",
     "description": "Discover the enchanting beauty of the Cotswolds. Embark on a 5-day walk through the idyllic Cotswolds region in Gloucester, England. Immerse yourself in quintessentially English country inns, explore ancient commons, and meander through honey-colored villages. ",
-    "ratingsAverage": 4.7
+    "ratingsAverage": 4.7,
+    "ratingsQuantity": 25
   },
   {
     "id": 2,
@@ -27,6 +29,7 @@
     "difficulty": "moderate",
     "summary": "Walk through Colorful Madeira Island in Portugal's charming archipelago",
     "description": "Take a wonderful timeout  in the picturesque Madeira Archipelago, Portugal. Enjoy comfortable stays in 4-star hotels or charming manor houses. Explore the flower-filled landscapes of Madeira on foot, and take a dip in the natural pools created by volcanic lava formations. Experience the vibrant colors and beauty of Madeira Island while walking through its enchanting scenery.",
-    "ratingsAverage": 4.7
+    "ratingsAverage": 4.7,
+    "ratingsQuantity": 37
   }
 ]

@@ -36,6 +36,11 @@ tourSchema = mongoose.Schema({
         type: Number,
     },
 
+    ratingsQuantity: {
+        type: Number,
+        default: 0,
+    },
+
     images: [String],
 
     createAt: {
