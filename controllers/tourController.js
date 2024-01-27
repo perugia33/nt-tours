@@ -151,12 +151,51 @@ exports.getTourStats = async (req, res) => {
     // The agregation pipeline is a MongoDB feature
 };
 
+// Using agregation pipeline to calculate how many tours start each month
+exports.getMonthlyPlan = async (req, res) => {
+    try {
+        const year = req.params.year * 1;
+        const plan = await Tour.aggregate([
+            {
+                $unwind: '$startDates',
+            },
+            {
+                $match: {
+                    startDates: {
+                        $gte: new Date(`${year}-01-01T00:00:00.000Z`),
+                        $lte: new Date(`${year}-12-31T23:59:59.999Z`),
+                    },
+                },
+            },
+
+            // {
+            //     $group: {
+            //         _id: { $month: '$startDates' },
+            //         numTourStarts: { $sum: 1 },
+            //     },
+            // },
+        ]);
+
+        res.status(200).json({
+            status: 'success',
+            data: {
+                plan,
+            },
+        });
+    } catch (err) {
+        res.status(404).json({
+            status: 'fail',
+            message: err,
+        });
+    }
+};
+
 // const tours = JSON.parse(
 //     fs.readFileSync(`${__dirname}/../dev-data/data/tours-simple.json`),
 // );
 
 //  MIDDLEWARE
-// Validate Id
+// Validate Idn
 // exports.verifyID = (req, res, next, val) => {
 //     console.log(`Tour Id is :  ${val} `);
 //     if (req.params.id * 1 > tours.length) {
