@@ -1,4 +1,4 @@
-<img src="./images/landing-page.jpeg" alt="Alt Text" width="600" height="300" />
+<img src="/images/landing-page.jpeg" alt="Alt Text" width="600" height="300" />
 
 <br/>
 
