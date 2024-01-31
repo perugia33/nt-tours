@@ -1,5 +1,5 @@
+<img src="landing-page.jpeg" alt="Landing Page" width="600" height="300">
 
-<img src="landing-page.jpeg" alt="Landing Page" width="600" height="300" />
 
 
 <br/>
