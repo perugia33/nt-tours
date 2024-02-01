@@ -1,4 +1,7 @@
+/* eslint-disable prettier/prettier */
 const mongoose = require('mongoose');
+const validator = require('validator');
+
 
 // Schema
 tourSchema = mongoose.Schema({
@@ -6,6 +9,8 @@ tourSchema = mongoose.Schema({
         type: String,
         required: [true, 'Enter the tour name'],
         unique: true,
+        // eslint-disable-next-line prettier/prettier
+        maxLength: [70, "A tour's name should have a maxium of 70 characters"],
     },
 
     duration: {
@@ -18,8 +23,26 @@ tourSchema = mongoose.Schema({
         required: [true, "Enter the tour's price"],
     },
 
+    // adding a custom validator to evaluate if price disc is greater than the price
+    // returns a boolean. 'False' triggers a validation error
+    priceDiscount: {
+        type: Number,
+        validate: {
+            validator: function (val) {
+                return val < this.price;
+            },
+            message:
+                'Discount price ({VALUE})should be less than regular price',
+        },
+    },
+
     difficulty: {
         type: String,
+        enum: {
+            values: ['easy', 'moderate', 'difficult'],
+            message:
+                'Difficulty choices are either easy, moderate or difficult',
+        },
     },
 
     summary: {
@@ -34,6 +57,10 @@ tourSchema = mongoose.Schema({
 
     ratingsAverage: {
         type: Number,
+        // eslint-disable-next-line prettier/prettier
+        min: [1, 'Rating should be between 1 -5'],
+        // eslint-disable-next-line prettier/prettier
+        max: [5, 'Rating should be between 1 -5'],
     },
 
     ratingsQuantity: {

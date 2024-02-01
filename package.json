@@ -34,7 +34,8 @@
     "mongodb": "^6.2.0",
     "mongoose": "^5.13.21",
     "morgan": "^1.10.0",
-    "prettier": "^3.1.0"
+    "prettier": "^3.1.0",
+    "validator": "^13.11.0"
   },
   "nodemonConfig": {
     "watch": [
