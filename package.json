@@ -1,48 +1,49 @@
 {
-  "name": "nt-tours",
-  "version": "1.0.0",
-  "description": "Landing page for Venture Tours",
-  "main": "index.js",
-  "scripts": {
-    "compile:sass": "node-sass sass/main.scss   css/style.css",
-    "watch:sass": "node-sass -w   sass/main.scss  css/style.css",
-    "start": "nodemon server.js",
-    "start:prod": "NODE_ENV=production nodemon server.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/perugia33/nt-tours"
-  },
-  "author": "\"Theresa\"",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/perugia33/nt-tours/issues"
-  },
-  "homepage": "https://github.com/perugia33/nt-tours#readme",
-  "devDependencies": {
-    "eslint-config-prettier": "^9.0.0",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-prettier": "^5.0.1",
-    "node-sass": "^9.0.0",
-    "nodemon": "^3.0.1"
-  },
-  "dependencies": {
-    "dotenv": "^16.3.1",
-    "eslint": "^8.53.0",
-    "express": "^4.18.2",
-    "jquery": "^3.7.1",
-    "mongodb": "^6.2.0",
-    "mongoose": "^5.13.21",
-    "morgan": "^1.10.0",
-    "prettier": "^3.1.0",
-    "validator": "^13.11.0"
-  },
-  "nodemonConfig": {
-    "watch": [
-      "server.js",
-      "routes",
-      "controllers"
-    ],
-    "ext": "js,json"
-  }
+    "name": "nt-tours",
+    "version": "1.0.0",
+    "description": "Landing page for Venture Tours",
+    "main": "index.js",
+    "scripts": {
+        "compile:sass": "node-sass sass/main.scss   css/style.css",
+        "watch:sass": "node-sass -w   sass/main.scss  css/style.css",
+        "start": "nodemon server.js",
+        "start:prod": "NODE_ENV=production nodemon server.js",
+        "debug": "ndb server.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/perugia33/nt-tours"
+    },
+    "author": "\"Theresa\"",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/perugia33/nt-tours/issues"
+    },
+    "homepage": "https://github.com/perugia33/nt-tours#readme",
+    "devDependencies": {
+        "eslint-config-prettier": "^9.0.0",
+        "eslint-plugin-node": "^11.1.0",
+        "eslint-plugin-prettier": "^5.0.1",
+        "node-sass": "^9.0.0",
+        "nodemon": "^3.0.1"
+    },
+    "dependencies": {
+        "dotenv": "^16.3.1",
+        "eslint": "^8.53.0",
+        "express": "^4.18.2",
+        "jquery": "^3.7.1",
+        "mongodb": "^6.2.0",
+        "mongoose": "^5.13.21",
+        "morgan": "^1.10.0",
+        "prettier": "^3.1.0",
+        "validator": "^13.11.0"
+    },
+    "nodemonConfig": {
+        "watch": [
+            "server.js",
+            "routes",
+            "controllers"
+        ],
+        "ext": "js,json"
+    }
 }
